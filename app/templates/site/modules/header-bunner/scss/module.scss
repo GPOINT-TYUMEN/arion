@@ -1,0 +1,85 @@
+$colorBunnerTitle: #FFF;
+$colorBunnerDesc: #FFF;
+.header-bunner {
+	@include bg('bunner.jpg');
+	min-height: 473px;
+	margin-top: 10px;
+
+
+	.right-content {
+		float: right;
+		width: 48%;
+		margin-top: 135px;
+	}
+
+	.bunner-title {
+		font-family: $GilroyBold;
+		color: $colorBunnerTitle;
+		font-size: 40px;
+		line-height: 40px;
+	}
+
+	.bunner-title:after {
+		content: "";
+		display: block;
+		height: 3px;
+		width: 85px;
+		background-color: #FFF;
+		margin-top: 22px;
+	}
+
+	.bunner-desc {
+		margin-top: 25px;
+		font-family: $GilroyMed;
+		color: $colorBunnerDesc;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	
+	[class^="btn_"] {
+		margin-top: 22px;
+	}
+
+}
+
+@media screen and (max-width: 960px) and (min-width: 320px) {
+	.header-bunner {
+		.right-content {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 748px) and (min-width: 524px) {
+	.header-bunner {
+		.bunner-title {
+			font-size: 25px;
+			line-height: 28px;
+		}
+	}
+}
+
+@media screen and (max-width: 524px) and (min-width: 320px) {
+	.header-bunner {
+		background-image: url(../images/mobile_bunner.jpg);
+
+		.mobile-bunner-bg {
+			display: block;
+		}
+		
+
+		.bunner-title {
+			font-size: 24px;
+			line-height: 25px;
+		}
+
+		.bunner-desc {
+			font-size: 18px;
+			margin-top: 16px;
+		}
+		
+		.right-content {
+			margin-top: 200px;
+		}
+	}
+}
